@@ -3,8 +3,17 @@ __author__ = 'chen_ming'
 __date__ = '2019-04-10 08:16'
 
 
+# 若实例属性和类属性有相同的名称，相同名称的实例属性将屏蔽掉类属性，但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性。
+# 实例属性属于各个实例所有，互不干扰；
+# 类属性属于类所有，所有实例共享一个属性。
 class Student(object):
+    # 类属性
+    name = 'Student'
+    # 限制实例的属性,仅对当前类有效，对继承的子类无效
+    # __slots__ = ('name', 'age')
+
     # 数据封装
+    # 通过实例变量或self变量给实例绑定属性
     # def __init__(self, name, score):
     #     self.name = name
     #     self.score = score

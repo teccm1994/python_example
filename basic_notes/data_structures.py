@@ -226,3 +226,12 @@ class FileSystem(object):
 
 print(sys.getsizeof(FileSystem))
 
+
+# 获取对象信息
+# 判断对象类型
+type(123)
+# 判断类的类型
+isinstance('a', str)
+# 获取一个对象所有的属性和方法
+dir('ABC')
+
