@@ -14,3 +14,18 @@ def plus(number):
 
 
 plus(20)
+
+
+def mulby(num):
+    print('num:', num)
+
+    def gn(val):
+        return num * val
+    return gn
+
+
+zw = mulby(7)
+print(zw(9))
+
+
+

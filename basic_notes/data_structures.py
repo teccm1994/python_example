@@ -87,7 +87,7 @@ a ^ b
 
 c = {x for x in 'abracadabra' if x not in 'abc'}
 
-# 字典，以关键字为索引，关键字可以是任意不可变类型
+# dict字典，以关键字为索引，关键字可以是任意不可变类型
 tel = {'jack': 4098, 'sape': 4139}
 tel['guido'] = 4127
 del tel['sape']
@@ -235,3 +235,14 @@ isinstance('a', str)
 # 获取一个对象所有的属性和方法
 dir('ABC')
 
+
+# 字符串
+def str_test(num):
+    str = 'first'
+    for i in range(num):
+        str += 'X'
+        return str
+
+
+str = str_test(4)
+print(str)

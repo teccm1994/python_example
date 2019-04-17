@@ -87,3 +87,21 @@ def run_twice(animal):
 run_twice(Animal())
 run_twice(Dog())
 
+
+class A(object):
+
+    def show(self):
+        print('base show')
+
+
+class B(A):
+    def show(self):
+        print('derived show')
+
+
+obj = B()
+obj.show()
+print(dir(obj))
+obj.__class__ = A
+obj.show()
+
