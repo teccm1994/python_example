@@ -235,6 +235,13 @@ isinstance('a', str)
 # 获取一个对象所有的属性和方法
 dir('ABC')
 
+# is比较两个对象在内存中的地址是否一样,id(a) == id(b)
+# ==检查两个对象是否相等,a.__eq__(b)
+a = [1, 2, 3]
+b = [1, 2, 3]
+print('is: ', a is b)
+print('==: ', a == b)
+
 
 # 字符串
 def str_test(num):
@@ -246,3 +253,4 @@ def str_test(num):
 
 str = str_test(4)
 print(str)
+
