@@ -88,6 +88,7 @@ run_twice(Animal())
 run_twice(Dog())
 
 
+# 继承
 class A(object):
 
     def show(self):
@@ -104,4 +105,6 @@ obj.show()
 print(dir(obj))
 obj.__class__ = A
 obj.show()
+
+
 

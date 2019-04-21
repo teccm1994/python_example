@@ -3,6 +3,7 @@ __author__ = 'chen_ming'
 __date__ = '2019-03-11 07:53'
 
 
+# 可变对象创建后可改变但地址不会改变；不可变对象创建后不能改变，若改变则会指向一个新的对象。
 # list
 # 针对列表（可变类型），修改列表的方法（insert，remove， sort）没有打印返回值，返回None
 list = [66.25, 333, 333, 1, 1234.5]
@@ -241,6 +242,17 @@ a = [1, 2, 3]
 b = [1, 2, 3]
 print('is: ', a is b)
 print('==: ', a == b)
+
+
+# None是单例对象，如果是None，一定和None指向同一个内存地址。
+class Foo(object):
+    def __eq__(self, other):
+        return True
+
+
+f = Foo()
+print(f == None)
+print(f is None)
 
 
 # 字符串
