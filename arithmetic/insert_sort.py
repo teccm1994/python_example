@@ -24,6 +24,7 @@ def insert_sort_2(lists):
             if lists[j] > key:
                 lists[j + 1] = lists[j]
                 lists[j] = key
+                print("%s-%s time: %s" % (i, j, lists))
             j -= 1
     print(lists)
 
