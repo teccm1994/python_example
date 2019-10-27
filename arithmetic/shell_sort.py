@@ -12,6 +12,7 @@ def shell_sort(array):
             for j in range(i % gap, i, gap):
                 if array[i] < array[j]:
                     array[i], array[j] = array[j], array[i]
+                    print("%s: %s" % (gap, array))
     print(array)
 
 
