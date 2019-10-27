@@ -17,6 +17,7 @@ def quick_sort(array):
                 l += 1
             array[l], array[r] = array[r], array[l]
         array[l], array[begin] = pivot, array[l]
+        print("result: %s" % array)
         recursive(begin, l-1)
         recursive(r+1, end)
 
