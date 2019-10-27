@@ -20,6 +20,7 @@ def heap_sort(array):
     # 从2开始，到-1结束，增量为-1
     for i in range(len(heap) // 2, -1, -1):
         heap_adjust(i)
+        print("%s time: %s" % (i, heap))
     while len(heap) != 0:
         heap[0], heap[-1] = heap[-1], heap[0]
         array.insert(0, heap.pop())
