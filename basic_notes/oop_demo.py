@@ -107,4 +107,40 @@ obj.__class__ = A
 obj.show()
 
 
+# __init__()不是构造方法
+class AppleDog(object):
+    # __new__()一般需要返回类的对象，当返回类的对象时会自动调用__int__()进行初始化。用于创建实例。
+    def __new__(cls, *args, **kwargs):
+        print(cls)
+        print(args)
+        print(kwargs)
+        print("--------------")
+        instance = object.__new__(cls)
+        return instance
+        # print(instance)
 
+    # __init__()不需要显式返回，默认为None。用于实例初始化。
+    def __init__(self, a, b):
+        print("init gets called")
+        print("self is", self)
+        self.a, self.b = a, b
+a1 = AppleDog(1, 2)
+print(a1.a)
+print(a1.b)
+
+
+# self表示实例对象本身
+class SelfTest(object):
+    def __init__(self, name):
+        self.name = name
+
+    def showself(self):
+        print("self here is%s" % self)
+
+    def display(self):
+        self.showself()
+        print("The name is:", self.name)
+
+st = SelfTest("instance self")
+st.display()
+print("%X" % (id(st)))
