@@ -9,6 +9,7 @@ def bubble_sort(array):
         for j in range(i, len(array)):
             if array[i] > array[j]:
                 array[i], array[j] = array[j], array[i]
+                print(" the %s-%s time: %s" % (i, j, array))
     print(array)
 
 
