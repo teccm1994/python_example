@@ -12,6 +12,7 @@ def select_sort(array):
             if array[min] > array[j]:
                 min = j
         array[min], array[i] = array[i], array[min]
+        print("%s-%s time: %s" % (i, j, array))
     print(array)
 
 
